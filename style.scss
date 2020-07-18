@@ -1,0 +1,379 @@
+$color: rgb(50,4,119);
+$color2: rgb(246,46,121);
+$shadow: 2px 2px black;
+$red: rgb(255,0,0);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    font-family: circular std, sans-serif;
+    font-weight: 100;
+    // background-image: url(img/port.png);
+    // background-image: url(img/port2.png);
+    background-image: url(img/portfolioBackdrop.png);
+}
+
+body {
+    // width: 60%;
+    // margin: auto;
+    background-image: url();
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 400;
+    color: #17191A; 
+    // color: rgb(246,46,121);
+    // text-shadow: $shadow;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 400;
+    color: #17191A; 
+    // color: $color2;
+    // text-shadow: $shadow;
+}
+
+h5 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #17191A; 
+}
+
+p {
+    // color: #8F9EA5;
+    color: #444b50;
+    // color:white;
+    opacity:0.8;
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 18px;
+    // text-shadow: $shadow;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-left: 275px;
+    width:1000px;
+}
+
+.contactMe, .navIcons {
+    flex: 1;
+}
+
+.navIcons {
+    text-align: right;
+}
+
+.navIcons a, .contactMe a, .contactMe img {
+    display: inline-block;
+    vertical-align: middle;
+    // color: #027BFF;
+    color:white;
+    text-decoration: none;
+}
+
+.navIcons a {
+    margin-left: 40px;
+}
+
+.contactMe a {
+    color: #027BFF;
+    text-decoration: none;
+}
+
+.contactMe img {
+    margin-right: 10px;
+}
+
+/* Landing */
+.landing {
+    width: 60%;
+    margin: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.landingWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.landingL {
+    margin-top:4em;
+}
+
+.profile {
+    height: 380px;
+    width: 380px;
+    text-align:right;
+}
+
+.about {
+    width: 400px;
+}
+.scroll {
+    position: absolute;
+    bottom: 180px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Skills */
+#skills {
+    height:50px;
+}
+.skills {
+    text-align: center;
+    margin-bottom: 10em;
+}
+.skills p {
+    margin-bottom: 30px;
+}
+.skills img {
+    /* width: 40px; */
+    margin: 0 15px;
+    height:100px;
+    width:90px;
+}
+
+.programs {
+    width:60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .icon {
+        padding:20px;
+    }
+}
+
+
+
+
+#portfolio {
+    text-align: center;
+    margin-bottom: 5em;
+}
+.projectGrid {
+    // width:100%;
+    width:100vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
+    
+    .projectGrid__project {
+        transform: translate(-0%, -0%);
+        position: relative;
+
+        .projectGrid__IMG {
+            width: 100%;
+            height:100%;
+            
+        }
+
+
+        .overlay {
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            height:100%;
+            width:100%;
+            opacity:0;
+            transition:.5 ease;
+            background: rgba(0, 0, 0, 0.9);
+            text-align:center;
+    
+            .content {
+                // height:100%;
+                // width:100%;
+                // position: absolute;
+                text-align: center;
+                margin-top: 150px;
+                margin-left: 5px;
+                transform: translate(-0%, -0%);
+                color: #fff;
+                text-transform:uppercase;
+                // font-size: 28px;
+
+                .projectName {
+                    font-size: 28px;
+                    color:white;
+                }
+
+                a {
+                    text-decoration: none;
+                    color:white;
+                }
+
+                .view {
+                    font-size:14px;
+                }
+            }
+
+
+
+            .underline {
+                    display: block;
+                    background-color:$red;
+                    height: 3px;
+                    width: 95px;
+                    margin-top: 5px;
+                    margin:auto;
+                }
+        }
+    }
+    
+    
+
+    .projectGrid__project:hover .overlay {
+        opacity: 1;
+    }
+
+   
+
+
+    
+}
+
+.contact {
+    margin-top: 200px;
+    text-align:center;
+
+    .contactInfo {
+        width:60%;
+        margin:auto;
+        text-align: left;
+    }
+
+    p {
+        font-size: 40px;
+        // color: $red;
+        margin-top: 40px;
+    }
+
+    a{
+        color: #444b50;
+        text-decoration:none;
+        // text-shadow: $shadow;
+    }
+
+    button {
+        width: 200px;
+        height:80px;
+        border-radius: 30px;
+        font-size: 32px;
+        background-color: rgb(247, 6, 6);
+        box-shadow: $shadow;
+    }
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: $red;
+    // background-repeat: no-repeat;
+    // background-position: right top;
+    height:150px;
+    // background-size: 320px;
+    text-align: center;
+    margin-top:300px;
+    
+    .footerLinks {
+        height: 85%;
+        width:100%;
+        // margin:auto;
+        display:flex;
+        // justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footIcons {
+        margin-top: 30px;
+        margin-right: 60px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        margin-right: 1100px;
+        margin-left: 40px;
+
+        .footIcons a {
+            margin-top:40px;
+            text-align: right;
+            display: inline-block;
+            vertical-align: middle;
+            color:white;
+            text-decoration: none;
+        }
+    }
+   
+
+    .icons {
+        height:50px;
+        width:50px;
+    }
+
+    .update {
+        background-color: $red;
+        margin:0;
+
+        p {
+            color:white;
+            margin:0;
+            text-shadow: 1px 1px black;
+        }
+    }
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.underlineSmall {
+    display: block;
+    height: 3px;
+    width: 41px;
+    margin: 5px auto 0 auto;
+    background-color: $red;
+}
